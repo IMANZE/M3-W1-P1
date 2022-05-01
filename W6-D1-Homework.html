@@ -375,7 +375,11 @@
         }
         removeTwitter()
         // EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
-       
+        for (let link of document.querySelectorAll(".stretched-link"))
+                link.href = function (event) {
+                    event.preventDefault() 
+                    event.target.closest(".col-md-6").remove();
+        }
         // EXTRA Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers with the mouse on an author name
 
     </script>
