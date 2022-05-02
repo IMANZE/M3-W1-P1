@@ -381,7 +381,11 @@
                     event.target.closest(".col-md-6").remove();
         }
         // EXTRA Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers with the mouse on an author name
-
+        for (let author of document.querySelectorAll(".blog-post-meta a"))
+                author.addEventListener("mouseover", function (event) {
+                    alert(event.target.innerText);
+                });
+        
     </script>
 </body>
 
